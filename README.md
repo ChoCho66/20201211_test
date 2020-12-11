@@ -18,7 +18,11 @@ alert(s);
  
 ```python
 s = "Python 語法高亮"
-print s
+print(s)
+
+import numpy as np
+for i in range(10):
+    print(i)
 ```
  
 ```
