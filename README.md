@@ -11,24 +11,17 @@
     ```
 
 
-粗體：
-
-*your text*
-斜體：
-
-_your text_
-刪除線：
-
-~your text~
-階層：
-
->Quote one sentence
->>> Quote multiple sentences
-小區塊：
-
-`Format one word or one line*`
-大區塊：
-
-    ```
-    Format blocks of text
-    ```
+```javascript
+var s = "JavaScript 語法高亮";
+alert(s);
+```
+ 
+```python
+s = "Python 語法高亮"
+print s
+```
+ 
+```
+沒有指定程式語言，所以沒有語法高亮。
+不過，我們可以放進一個 標籤。
+```
