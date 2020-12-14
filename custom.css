@@ -1,0 +1,67 @@
+/*************************************************
+TOC
+*************************************************/
+
+
+/*************************************************
+Source Code
+*************************************************/
+
+/* Outer Box */
+div.sourceCode {
+  background-color: transparent         !important;
+}
+
+/* Inner Box */
+pre.sourceCode {
+  border:           1px solid lightgray !important;
+  border-radius:    2px;
+  background-color: Azure         !important;
+}
+
+
+/*************************************************
+Source Code and Output Block
+*************************************************/
+/* Code block - Source and Output */
+/* Make the word wrap             */
+code {
+  white-space:  pre-wrap    !important;
+  word-break:   keep-all    !important;
+  overflow-x:   hidden   !important;
+}
+
+pre {
+  margin-top:       5px                 !important;
+  margin-bottom:    5px                 !important;
+  padding:          8px                 !important;
+  line-height:      1.0                 !important;
+  background-color: LightGray         !important;
+}
+
+/*************************************************
+Output Block
+*************************************************/
+
+/* Outer Box*/
+
+
+
+
+
+div.tbox {
+  padding: 0.5em;
+  background: White;
+  color: black;
+  border: 0.5px solid Gray;
+  border-radius: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.center {
+  text-align: center;
+}
+
+
