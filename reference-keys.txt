@@ -1,9 +1,11 @@
-def:unnamed-chunk-4
+eq:tttt1
+eq:test2
 def:unnamed-chunk-5
+def:unnamed-chunk-6
 fig:chunk-label
-thm:unnamed-chunk-12
-lem:unnamed-chunk-13
-thm:unnamed-chunk-14
+thm:unnamed-chunk-13
+lem:unnamed-chunk-14
+thm:unnamed-chunk-15
 fig:nice-fig
 tab:nice-tab
 test

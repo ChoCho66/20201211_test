@@ -171,27 +171,46 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>test statistic</strong>: A function of data, denoted as
 <span class="math display">\[ T(X_1,X_2, \cdots , X_n ).  \]</span></li>
 </ul>
+<p>Test function
+<span class="math display">\[\begin{align*}
+ &amp;f(x) = y.  &amp; \sin(x) &amp;= y. \\
+ &amp;g(h) = a.  &amp; \cos(t) &amp;=  \ell.
+\end{align*}\]</span></p>
+<span class="math display" id="eq:tttt1">\[\begin{align*}
+a = b = c
+\tag{2.1}
+\end{align*}\]</span>
+<p><span class="math display" id="eq:test2">\[\begin{equation}
+\begin{split}
+A &amp; = \frac{\pi r^2}{2} \\
+ &amp; = \frac{1}{2} \pi r^2
+\end{split}
+
+\tag{2.2}
+\end{equation}\]</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="testing.html#cb1-1"></a><span class="im">import</span> sys</span>
 <span id="cb1-2"><a href="testing.html#cb1-2"></a><span class="bu">print</span>(sys.version)</span></code></pre></div>
 <pre><code>## 3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)]</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="testing.html#cb3-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-2"><a href="testing.html#cb3-2"></a>plt.plot([<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>])</span>
-<span id="cb3-3"><a href="testing.html#cb3-3"></a>plt.show()</span></code></pre></div>
-<p><img src="20201127_stat_files/figure-html/unnamed-chunk-2-1.png" /><!-- --></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="testing.html#cb4-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> classification_report, confusion_matrix</span>
-<span id="cb4-2"><a href="testing.html#cb4-2"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="testing.html#cb3-1"></a><span class="bu">print</span>(<span class="st">&quot;sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss&quot;</span>)</span></code></pre></div>
+<pre><code>## sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="testing.html#cb5-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-2"><a href="testing.html#cb5-2"></a>plt.plot([<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>])</span>
+<span id="cb5-3"><a href="testing.html#cb5-3"></a>plt.show()</span></code></pre></div>
+<p><img src="20201127_stat_files/figure-html/unnamed-chunk-3-1.png" /><!-- --></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="testing.html#cb6-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> classification_report, confusion_matrix</span>
+<span id="cb6-2"><a href="testing.html#cb6-2"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code></pre></div>
 <pre><code>## C:\Users\ChoCho\Documents\R\win-library\4.0\reticulate\python\rpytools\loader.py:24: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.
 ##   level=level</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="testing.html#cb6-1"></a><span class="im">import</span> pandas_profiling</span>
-<span id="cb6-2"><a href="testing.html#cb6-2"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb6-3"><a href="testing.html#cb6-3"></a><span class="co">#pd.set_option(&quot;display.max_columns&quot;, 1000) #設定最大能顯示 1000 columns</span></span>
-<span id="cb6-4"><a href="testing.html#cb6-4"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb6-5"><a href="testing.html#cb6-5"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb6-6"><a href="testing.html#cb6-6"></a></span>
-<span id="cb6-7"><a href="testing.html#cb6-7"></a>df_train <span class="op">=</span> pd.read_csv(<span class="st">&quot;C:/Users/ChoCho/Desktop/!!!!!!20201212_鐵達尼_kaggle/train.csv&quot;</span>)</span>
-<span id="cb6-8"><a href="testing.html#cb6-8"></a>df_test <span class="op">=</span> pd.read_csv(<span class="st">&quot;C:/Users/ChoCho/Desktop/!!!!!!20201212_鐵達尼_kaggle/test.csv&quot;</span>)</span>
-<span id="cb6-9"><a href="testing.html#cb6-9"></a></span>
-<span id="cb6-10"><a href="testing.html#cb6-10"></a>df_train.info()</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="testing.html#cb8-1"></a><span class="im">import</span> pandas_profiling</span>
+<span id="cb8-2"><a href="testing.html#cb8-2"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb8-3"><a href="testing.html#cb8-3"></a><span class="co">#pd.set_option(&quot;display.max_columns&quot;, 1000) #設定最大能顯示 1000 columns</span></span>
+<span id="cb8-4"><a href="testing.html#cb8-4"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-5"><a href="testing.html#cb8-5"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb8-6"><a href="testing.html#cb8-6"></a></span>
+<span id="cb8-7"><a href="testing.html#cb8-7"></a>df_train <span class="op">=</span> pd.read_csv(<span class="st">&quot;C:/Users/ChoCho/Desktop/!!!!!!20201212_鐵達尼_kaggle/train.csv&quot;</span>)</span>
+<span id="cb8-8"><a href="testing.html#cb8-8"></a>df_test <span class="op">=</span> pd.read_csv(<span class="st">&quot;C:/Users/ChoCho/Desktop/!!!!!!20201212_鐵達尼_kaggle/test.csv&quot;</span>)</span>
+<span id="cb8-9"><a href="testing.html#cb8-9"></a></span>
+<span id="cb8-10"><a href="testing.html#cb8-10"></a>df_train.info()</span></code></pre></div>
 <pre><code>## &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 ## RangeIndex: 891 entries, 0 to 890
 ## Data columns (total 12 columns):
@@ -215,7 +234,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="tbox">
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-4" class="definition"><strong>Definition 2.1  </strong></span>asdasdasdd</p>
+<p><span id="def:unnamed-chunk-5" class="definition"><strong>Definition 2.1  </strong></span>asdasdasdd</p>
 <ol style="list-style-type: decimal">
 <li>ttt</li>
 <li>222</li>
@@ -226,7 +245,7 @@ asdasddasd
 <div class="tbox">
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-5" class="definition"><strong>Definition 2.2  </strong></span>asdasdasdd</p>
+<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definition 2.2  </strong></span>asdasdasdd</p>
 <ol style="list-style-type: decimal">
 <li>ttt</li>
 <li>222</li>
@@ -237,14 +256,11 @@ asdasddasd
 <div class="proof">
 <p> <span class="proof"><em>Proof. </em></span> </p>
 <ul>
+<li>TTTTTT</li>
 <li>If I am not mistaken, I cannot get an Rmarkdown style list to work either in the proof environment.</li>
 <li>Well, this is where i would like to be able to use inline code.<br />
 </li>
-<li>we use r to compute 1+1: <code>r 1+1</code>.<br />
-</li>
-<li>Does not work.<br />
-</li>
-<li>Just shows verbatim inline code.</li>
+<li>we use r to compute 1+1: <code>r 1+1</code>.</li>
 </ul>
 </div>
 
@@ -262,40 +278,26 @@ asdasddasd
 </ul>
 </div>
 <p>asdasdasd</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="testing.html#cb8-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb8-2"><a href="testing.html#cb8-2"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="testing.html#cb10-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb10-2"><a href="testing.html#cb10-2"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
 <pre><code>## 0
 ## 1
-## 2
-## 3
-## 4
-## 5
-## 6
-## 7
-## 8
-## 9</code></pre>
+## 2</code></pre>
 <pre><code>## 0
 ## 1
-## 2
-## 3
-## 4
-## 5
-## 6
-## 7
-## 8
-## 9</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="testing.html#cb11-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb11-2"><a href="testing.html#cb11-2"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+## 2</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="testing.html#cb13-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb13-2"><a href="testing.html#cb13-2"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
 <p>When you subset a data frame, it does not necessarily return
 a data frame. For example, if you subset two columns, you get
 a data frame, but when you try to subset one column, you get
 a vector:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb12-1"><a href="testing.html#cb12-1"></a>mtcars[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="st">&quot;mpg&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb14-1"><a href="testing.html#cb14-1"></a>mtcars[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="st">&quot;mpg&quot;</span>]</span></code></pre></div>
 <pre class="bg-warning"><code>## [1] 21.0 21.0 22.8 21.4 18.7</code></pre>
 <p>To make sure that we always get a data frame, we have to use
 the argument <code>drop = FALSE</code>. Now we use the chunk option
 <code>class.source = "bg-success"</code>.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r bg-success"><code class="sourceCode r"><span id="cb14-1"><a href="testing.html#cb14-1"></a>mtcars[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="st">&quot;mpg&quot;</span>, drop =<span class="st"> </span><span class="ot">FALSE</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r bg-success"><code class="sourceCode r"><span id="cb16-1"><a href="testing.html#cb16-1"></a>mtcars[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="st">&quot;mpg&quot;</span>, drop =<span class="st"> </span><span class="ot">FALSE</span>]</span></code></pre></div>
 <pre><code>##                    mpg
 ## Mazda RX4         21.0
 ## Mazda RX4 Wag     21.0
@@ -304,11 +306,11 @@ the argument <code>drop = FALSE</code>. Now we use the chunk option
 ## Hornet Sportabout 18.7</code></pre>
 <p>The default identifier is <code>an-introduction</code> but we changed
 it to <code>introduction</code>.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="testing.html#cb16-1"></a>a &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>    </span>
-<span id="cb16-2"><a href="testing.html#cb16-2"></a>b &lt;-<span class="st"> </span><span class="dv">10</span><span class="op">:</span><span class="dv">1</span>    </span>
-<span id="cb16-3"><a href="testing.html#cb16-3"></a>dataf &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> a, <span class="dt">y =</span> b)</span>
-<span id="cb16-4"><a href="testing.html#cb16-4"></a></span>
-<span id="cb16-5"><a href="testing.html#cb16-5"></a><span class="kw">summary</span>(dataf)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="testing.html#cb18-1"></a>a &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>    </span>
+<span id="cb18-2"><a href="testing.html#cb18-2"></a>b &lt;-<span class="st"> </span><span class="dv">10</span><span class="op">:</span><span class="dv">1</span>    </span>
+<span id="cb18-3"><a href="testing.html#cb18-3"></a>dataf &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> a, <span class="dt">y =</span> b)</span>
+<span id="cb18-4"><a href="testing.html#cb18-4"></a></span>
+<span id="cb18-5"><a href="testing.html#cb18-5"></a><span class="kw">summary</span>(dataf)</span></code></pre></div>
 <pre><code>##        x               y        
 ##  Min.   : 1.00   Min.   : 1.00  
 ##  1st Qu.: 3.25   1st Qu.: 3.25  
@@ -316,19 +318,19 @@ it to <code>introduction</code>.</p>
 ##  Mean   : 5.50   Mean   : 5.50  
 ##  3rd Qu.: 7.75   3rd Qu.: 7.75  
 ##  Max.   :10.00   Max.   :10.00</code></pre>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="testing.html#cb18-1"></a><span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="testing.html#cb20-1"></a><span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span></code></pre></div>
 <pre><code>## [1] 2</code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="testing.html#cb20-1"></a><span class="kw">rnorm</span>(<span class="dv">10</span>)  <span class="co"># 10 random numbers</span></span></code></pre></div>
-<pre><code>##  [1]  0.4404789 -0.2278879 -1.4331758 -1.3620667  0.6624688  0.9555030
-##  [7]  0.9499041 -0.4537561  0.1166900  1.3869056</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="testing.html#cb22-1"></a><span class="kw">plot</span>(dist <span class="op">~</span><span class="st"> </span>speed, cars)  <span class="co"># a scatterplot</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="testing.html#cb22-1"></a><span class="kw">rnorm</span>(<span class="dv">10</span>)  <span class="co"># 10 random numbers</span></span></code></pre></div>
+<pre><code>##  [1]  0.89810692  1.51223071  0.58348803 -1.20372152  1.46538575  2.49770767
+##  [7]  0.37505093  0.28463388  0.07231573 -1.95570273</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="testing.html#cb24-1"></a><span class="kw">plot</span>(dist <span class="op">~</span><span class="st"> </span>speed, cars)  <span class="co"># a scatterplot</span></span></code></pre></div>
 <div class="figure"><span id="fig:chunk-label"></span>
 <img src="20201127_stat_files/figure-html/chunk-label-1.png" alt="A figure caption." width="672" />
 <p class="caption">
 Figure 2.1: A figure caption.
 </p>
 </div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="testing.html#cb23-1"></a><span class="kw">paste</span>(<span class="st">&quot;Hello&quot;</span>, <span class="st">&quot;World!&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="testing.html#cb25-1"></a><span class="kw">paste</span>(<span class="st">&quot;Hello&quot;</span>, <span class="st">&quot;World!&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Hello World!&quot;</code></pre>
 <div class="tbox">
 <ul>
@@ -355,39 +357,39 @@ tetas</li>
 <div class="tbox">
 
 <div class="theorem">
-<span id="thm:unnamed-chunk-12" class="theorem"><strong>Theorem 2.1  </strong></span>Let <span class="math inline">\(A = B.\)</span>
+<span id="thm:unnamed-chunk-13" class="theorem"><strong>Theorem 2.1  </strong></span>Let <span class="math inline">\(A = B.\)</span>
 <span class="math inline">\(1+1 = 2.\)</span>
 </div>
 </div>
 <div class="tbox">
 
 <div class="lemma">
-<span id="lem:unnamed-chunk-13" class="lemma"><strong>Lemma 2.1  </strong></span>Let <span class="math inline">\(A = B.\)</span>
+<span id="lem:unnamed-chunk-14" class="lemma"><strong>Lemma 2.1  </strong></span>Let <span class="math inline">\(A = B.\)</span>
 <span class="math inline">\(1+1 = 2.\)</span>
 </div>
 </div>
 <div class="tbox">
 
 <div class="theorem">
-<span id="thm:unnamed-chunk-14" class="theorem"><strong>Theorem 2.2  </strong></span>Let <span class="math inline">\(A = B.\)</span>
+<span id="thm:unnamed-chunk-15" class="theorem"><strong>Theorem 2.2  </strong></span>Let <span class="math inline">\(A = B.\)</span>
 <span class="math inline">\(1+1 = 2.\)</span>
 </div>
 </div>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="testing.html#cb25-1"></a><span class="kw">rnorm</span>(<span class="dv">5</span>)</span></code></pre></div>
-<pre><code>## [1]  0.7462478  0.3663689 -0.7129631 -1.3243575  0.4203086</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="testing.html#cb27-1"></a>my_vector &lt;-<span class="st"> </span><span class="dv">11</span><span class="op">:</span><span class="dv">20</span></span>
-<span id="cb27-2"><a href="testing.html#cb27-2"></a><span class="kw">match</span>(<span class="dv">17</span>, my_vector)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="testing.html#cb27-1"></a><span class="kw">rnorm</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] -1.46424039 -0.62998683 -0.03771665 -0.29989578  2.11118460</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="testing.html#cb29-1"></a>my_vector &lt;-<span class="st"> </span><span class="dv">11</span><span class="op">:</span><span class="dv">20</span></span>
+<span id="cb29-2"><a href="testing.html#cb29-2"></a><span class="kw">match</span>(<span class="dv">17</span>, my_vector)</span></code></pre></div>
 <pre><code>## [1] 7</code></pre>
 <p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
 <p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="testing.html#cb29-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb29-2"><a href="testing.html#cb29-2"></a><span class="co"># or the development version</span></span>
-<span id="cb29-3"><a href="testing.html#cb29-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="testing.html#cb31-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
+<span id="cb31-2"><a href="testing.html#cb31-2"></a><span class="co"># or the development version</span></span>
+<span id="cb31-3"><a href="testing.html#cb31-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
 <p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
 <p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="#intro"><strong>??</strong></a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="methods.html#methods">4</a>.</p>
 <p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="testing.html#cb30-1"></a><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))</span>
-<span id="cb30-2"><a href="testing.html#cb30-2"></a><span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="testing.html#cb32-1"></a><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))</span>
+<span id="cb32-2"><a href="testing.html#cb32-2"></a><span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:nice-fig"></span>
 <img src="20201127_stat_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
 <p class="caption">
@@ -395,10 +397,10 @@ Figure 2.2: Here is a nice figure!
 </p>
 </div>
 <p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="testing.html#fig:nice-fig">2.2</a>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="testing.html#tab:nice-tab">2.1</a>.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="testing.html#cb31-1"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
-<span id="cb31-2"><a href="testing.html#cb31-2"></a>  <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb31-3"><a href="testing.html#cb31-3"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
-<span id="cb31-4"><a href="testing.html#cb31-4"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="testing.html#cb33-1"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
+<span id="cb33-2"><a href="testing.html#cb33-2"></a>  <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
+<span id="cb33-3"><a href="testing.html#cb33-3"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
+<span id="cb33-4"><a href="testing.html#cb33-4"></a>)</span></code></pre></div>
 <table>
 <caption><span id="tab:nice-tab">Table 2.1: </span>Here is a nice table!</caption>
 <thead>
